@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="shortcut icon" href="/images/holidaiss.ico" />
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- Title -->
+<title>HolidAISS</title>
+
+<!-- Favicon -->
+<link rel="icon" href="img/core-img/favicon.ico">
+
+<!-- Core Stylesheet -->
+<link href="style.css" rel="stylesheet">
+
+<!-- Responsive CSS -->
+<link href="css/responsive/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="dorne-load"></div>
+	</div>
+
+	<!-- ***** Search Form Area ***** -->
+	<div class="dorne-search-form d-flex align-items-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="search-close-btn" id="closeBtn">
+						<i class="pe-7s-close-circle" aria-hidden="true"></i>
+					</div>
+					<form action="#" method="get">
+						<input type="search" name="caviarSearch" id="search"
+							placeholder="Busca destino o eventos"> <input
+							type="submit" class="d-none" value="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ***** Header Area Start ***** -->
+	<header class="header_area" id="header">
+		<div class="container-fluid h-100">
+			<div class="row h-100">
+				<div class="col-12 h-100">
+					<nav class="h-100 navbar navbar-expand-lg">
+						<a class="navbar-brand" href="index.html"><img
+							src="images/holidaisstext.png" alt=""></a>
+						<button class="navbar-toggler" type="button"
+							data-toggle="collapse" data-target="#dorneNav"
+							aria-controls="dorneNav" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="fa fa-bars"></span>
+						</button>
+						<!-- Nav -->
+						<div class="collapse navbar-collapse" id="dorneNav">
+							<ul class="navbar-nav mr-auto" id="dorneMenu">
+								<li class="nav-item active"><a class="nav-link"
+									href="index.html">Inicio <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item dropdown"><a
+									class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+									role="button" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">API<i class="fa fa-angle-down"
+										aria-hidden="true"></i></a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="/docs/index.html">API en Swagger</a> <a
+											class="dropdown-item" href="/api.html">API en HTML</a>
+									</div></li>
+								<li class="nav-item"><a class="nav-link" href="search.html">Mapa</a></li>
+								<li class="nav-item"><a class="nav-link"
+									href="contact.html">Contacto</a></li>
+								<li class="nav-item"><a class="nav-link"
+									href="https://github.com/rafseggom/holidaiss.git"
+									onclick='window.open("https://github.com/rafseggom/holidaiss.git");return false;'>GitHub</a></li>
+							</ul>
+							<!-- Search btn -->
+							<!-- <div class="dorne-search-btn">
+								<a id="search-btn" href="#"><i class="fa fa-spotify"
+									aria-hidden="true"></i>Search</a>
+							</div> -->
+
+							<!-- Signin btn -->
+							<div class="dorne-signin-btn">
+								<a href="/spotifyPlaylistCreate.jsp"><img
+									src="images/spotify3.png" width="150px" hspace="10px"
+									style="float: center;"></a>
+							</div>
+
+							<!-- Add listings btn -->
+							<!-- <div class="dorne-add-listings-btn">
+								<a href="#" class="btn dorne-btn">+ Add Listings</a>
+							</div> -->
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- ***** Header Area End ***** -->
+
+	<!-- ***** Welcome Area Start ***** -->
+	<section class="dorne-welcome-area bg-img bg-overlay"
+		style="background-image: url(img/bg-img/hero-1.jpg);">
+		<div class="container h-100">
+			<div class="row h-100 align-items-center justify-content-center">
+				<div class="col-12 col-md-10">
+					<div class="hero-content">
+						<h2>Descubre vuelos al mejor precio</h2>
+						<h4>El mejor comparador de precios para tu viaje.</h4>
+					</div>
+					<!-- Hero Search Form -->
+					<div class="hero-search-form">
+						<!-- Tabs -->
+						<div class="nav nav-tabs" id="heroTab" role="tablist">
+							<a class="nav-item nav-link active" id="nav-places-tab"
+								data-toggle="tab" href="#nav-places" role="tab"
+								aria-controls="nav-places" aria-selected="true">¡Configura tu vuelo!</a>
+
+							<!-- Search tab -->
+							<!-- <a	class="nav-item nav-link" id="nav-events-tab" data-toggle="tab"
+								href="#nav-events" role="tab" aria-controls="nav-events"
+								aria-selected="false">Events</a> -->
+						</div>
+						<!-- Tabs Content -->
+						<div class="tab-content" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="nav-places"
+								role="tabpanel" aria-labelledby="nav-places-tab">
+								<h6>¿Qué estás buscando?</h6>
+								<div id="searchDiv">
+									<form id="searchForm" action="SearchController" method="post">
+										<!-- <select class="custom-select" required="required"
+											name="searchQuery">
+											<option selected>Tu origen</option>
+											<option value="MAD">Madrid</option>
+
+										</select> -->
+										<select class="custom-select" required="required"
+											name="searchDestino">
+											<option selected>Tu destino</option>
+											<option value="ACC">Accra</option>
+											<option value="ALC">Alicante</option>
+											<option value="BOS">Boston</option>
+											<option value="CCS">Caracas</option>
+											<option value="CLJ">Cluj-Napoca</option>
+											<option value="DBV">Dubrovnik</option>
+											<option value="DEN">Denver</option>
+											<option value="FLL">Fort Lauderdale</option>
+											<option value="GLA">Glasgow</option>
+											<option value="GOA">Genoa</option>
+											<option value="GOT">Goteborg</option>
+											<option value="HNL">Honolulu</option>
+											<option value="KIV">Chisinau</option>
+											<option value="KRK">Krakow</option>
+											<option value="KTM">Kathmandu</option>
+											<option value="LON">London</option>
+											<option value="LWO">Lviv</option>
+											<option value="MDZ">Mendoza</option>
+											<option value="MGA">Managua</option>
+											<option value="MLE">Male</option>
+											<option value="MOW">Moscow</option>
+											<option value="MTY">Monterrey</option>
+											<option value="MUC">Munich</option>
+											<option value="ORL">Orlando</option>
+											<option value="OSA">Osaka</option>
+											<option value="PSA">Pisa</option>
+											<option value="PTY">Panama</option>
+											<option value="REK">Reykjavik</option>
+											<option value="RGN">Yangon</option>
+											<option value="RIX">Riga</option>
+											<option value="SEA">Seattle</option>
+											<option value="SIN">Singapore</option>
+											<option value="SLC">Salt Lake City</option>
+											<option value="SSA">Salvador</option>
+											<option value="TLL">Tallinn</option>
+											<option value="TUN">Tunis</option>
+											<option value="TYO">Tokyo</option>
+											<option value="VCE">Venice</option>
+											<option value="VIE">Vienna</option>
+											<option value="WAW">Warsaw</option>
+
+
+										</select> <input type="date" placeholder="Fecha de salida"
+											class="custom-select" name="searchDate"> <select
+											class="custom-select" name="searchPrice">
+											<option selected>Rango de presupuesto</option>
+											<option value="100">hasta 100€</option>
+											<option value="199">hasta 199€</option>
+											<option value="299">hasta 299€</option>
+											<option value="399">hasta 399€</option>
+											<option value="499">hasta 499€</option>
+											<option value="599">hasta 599€</option>
+											<option value="1000">hasta 1000€</option>
+										</select>
+
+										<button type="submit" class="btn dorne-btn" name="searchBtn"
+											value="search">
+											<i class="fa fa-search pr-2" aria-hidden="true"></i> Buscar
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** Welcome Area End ***** -->
+
+	<!-- ***** Catagory Area Start ***** -->
+	<section class="dorne-catagory-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="all-catagories">
+						<div class="row">
+							<!-- Single Catagory Area -->
+							<div class="col-12 col-sm-6 col-md">
+								<div class="single-catagory-area wow fadeInUpBig"
+									data-wow-delay="0.2s">
+									<div class="catagory-content">
+										<img src="images/amadeuslogo2.png" alt=""> <a href="#">
+											<h6>Amadeus</h6>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- Single Catagory Area -->
+							<!-- <div class="col-12 col-sm-6 col-md">
+								<div class="single-catagory-area wow fadeInUpBig"
+									data-wow-delay="0.4s">
+									<div class="catagory-content">
+										<img src="img/core-img/icon-2.png" alt=""> <a href="#">
+											<h6>Restaurantes</h6>
+										</a>
+									</div>
+								</div>
+							</div> -->
+							<!-- Single Catagory Area -->
+							<div class="col-12 col-sm-6 col-md">
+								<div class="single-catagory-area wow fadeInUpBig"
+									data-wow-delay="0.6s">
+									<div class="catagory-content">
+										<img src="images/tomtomlogo2.png" alt=""> <a href="#">
+											<h6>TomTom</h6>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- Single Catagory Area -->
+							<!-- <div class="col-12 col-sm-6 col-md">
+								<div class="single-catagory-area wow fadeInUpBig"
+									data-wow-delay="0.8s">
+									<div class="catagory-content">
+										<img src="img/core-img/icon-4.png" alt=""> <a href="#">
+											<h6>Museos</h6>
+										</a>
+									</div>
+								</div>
+							</div> -->
+							<!-- Single Catagory Area -->
+							<div class="col-12 col-md">
+								<div class="single-catagory-area wow fadeInUpBig"
+									data-wow-delay="1s">
+									<div class="catagory-content">
+										<img src="images/spotifylogo2.png" alt=""> <a href="#">
+											<h6>Spotify</h6>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> 
+	<!-- ***** Catagory Area End ***** -->
+
+	<!-- ***** About Area Start ***** -->
+	<section class="dorne-about-area section-padding-0-100">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="about-content text-center">
+						<h2>
+							Descubre el mundo con <br> <span>HolidAISS</span>
+						</h2>
+						<p>Con HolidAISS podrás optimizar tus vacaciones, eligiendo el
+							destino al que te gustaría ir y tu presupuesto y te diremos las
+							opciones que mejor se ajustan a ti, para que tengas una
+							experiencia inolvidable.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ***** About Area End ***** -->
+
+	<!-- ****** Footer Area Start ****** -->
+	<footer class="dorne-footer-area">
+		<div class="container-fluid">
+			<div class="row">
+				<div
+					class="col-12 d-md-flex align-items-center justify-content-between">
+					<div class="footer-text">
+						<p>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							MashUp para la asignatura de AISS en la Universidad de Sevilla.
+							Web Template Copyright &copy;
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
+							All rights reserved | This template is made with <i
+								class="fa fa-heart-o" aria-hidden="true"></i> by <a
+								href="https://colorlib.com" target="_blank">Colorlib</a> | <a
+								href="/privacyPolicy.html" target="_self">Privacy Policy</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						</p>
+					</div>
+					<!-- <div class="footer-social-btns">
+						<a href="#"><i class="fa fa-linkedin" aria-haspopup="true"></i></a>
+						<a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a> <a
+							href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a> <a
+							href="#"><i class="fa fa-twitter" aria-haspopup="true"></i></a> <a
+							href="#"><i class="fa fa-facebook" aria-haspopup="true"></i></a>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- ****** Footer Area End ****** -->
+
+	<!-- jQuery-2.2.4 js -->
+	<script src="js/jquery/jquery-2.2.4.min.js"></script>
+	<!-- Popper js -->
+	<script src="js/bootstrap/popper.min.js"></script>
+	<!-- Bootstrap-4 js -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<!-- All Plugins js -->
+	<script src="js/others/plugins.js"></script>
+	<!-- Active JS -->
+	<script src="js/active.js"></script>
+</body>
+
+</html>

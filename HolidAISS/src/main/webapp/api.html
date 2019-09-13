@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/images/holidaiss.ico" />
+<title>HolidAISS API</title>
+</head>
+<body>
+	<input type="button" class="btn btn-lg btn-success"
+		onclick="location.href='https://holidaiss.appspot.com/';"
+		value="Volver a indice" />
+		<br>
+		<br>
+	<h1>Documentación de API REST de HolidAISS</h1>
+	<h2>Endpoint: https://holidaiss.appspot.com/api</h2>
+	<p>Hemos diseñado nuestra API REST enfocada a los servicios LIBRO y
+		LIBRERÍA, según los cuales, una librería está configurada para
+		almacenar distintos libros. Las representaciones JSON de los servicios
+		son las siguientes:</p>
+	<h2>Una representación JSON de LIBRO:</h2>
+	<p>{ "id:" "b3", "title": "Maze Runner", "autor": "James Dashner",
+		"saga": "Maze Runner", "year": "2009" }</p>
+
+	<h2>Una representación JSON de LIBRERÍA:</h2>
+	<p>{ "id": "l5", "name": "AISSLibrary", "description": "AISS
+		Library", "books": [{ "id:" "s0", "title": "Harry Potter and the
+		Philosopher's Stone", "autor": "J.K.Rowling", "saga": "Harry Potter",
+		"year": "1997" }, { "id:" "s1", "title": "A Game of Thrones", "autor":
+		"George R.R.Martin", "saga": "Game of Thrones", "year": "1996" }, {
+		"id:" "s2", "title": "The Fellowship of the Ring", "autor":
+		"J.R.R.Tolkien", "saga": "The Lord of the Rings", "year": "1954" }] }
+
+
+	
+	<h2>Tabla del servicio LIBRO</h2>
+	<table class="Libro">
+		<tr>
+			<td><h4>HTTP</h4></td>
+			<td><h4>URL</h4></td>
+			<td><h4>Descripción</h4></td>
+		</tr>
+		<tr>
+			<td><h5>GET</h5></td>
+			<td><h5>/books</h5></td>
+			<td><h4>
+					Devuelve todos los libros de la aplicación
+					</h5></td>
+		</tr>
+		<tr>
+			<td><h5>GET</h5></td>
+			<td><h5>/books/{id}</h5></td>
+			<td><h4>
+					Devuelve el libro con el id indicado
+					</h5></td>
+		</tr>
+		<tr>
+			<td><h5>POST</h5></td>
+			<td><h5>/books</h5></td>
+			<td><h4>
+					Añade un libro cuyos datos se pasan en el cuerpo de la petición en
+					formato JSON. De ser añadido correctamente, devuelve "201 Created".
+					Si no, "error 404"
+					</h5></td>
+		</tr>
+		<tr>
+			<td><h5>PUT</h5></td>
+			<td><h5>/books</h5></td>
+			<td><h4>Actualiza el libro de datos "title", "autor",
+					"saga" y "year", que se pasan en el cuerpo de la petición en
+					formato JSON, incluyendo el id de dicho libro. Si se realiza
+					correctamente, devuelve "204 No Content". De no ser así, "error
+					404"</h4></td>
+		</tr>
+		<tr>
+			<td><h5>DELETE</h5></td>
+			<td><h5>/books/{id}</h5></td>
+			<td><h4>Elimina el libro con id={id}. Si se realiza
+					correctamente, devuelve “204 No Content” Si el libro no existe,
+					devuelve “error 404"</h4></td>
+		</tr>
+	</table>
+
+	<h2>Tabla del servicio LIBRERÍA</h2>
+	<table class="Libreria">
+		<tr>
+			<td><h4>HTTP</h4></td>
+			<td><h4>URL</h4></td>
+			<td><h4>Descripción</h4></td>
+		</tr>
+		<tr>
+			<td><h5>GET</h5></td>
+			<td><h5>/libs</h5></td>
+			<td><h4>
+					Devuelve todas las librerías de la aplicación
+					</h5></td>
+		</tr>
+		<tr>
+			<td><h5>GET</h5></td>
+			<td><h5>/libs/{id}</h5></td>
+			<td><h4>
+					Devuelve la librería con el id indicado
+					</h5></td>
+		</tr>
+		<tr>
+			<td><h5>POST</h5></td>
+			<td><h5>/libs</h5></td>
+			<td><h4>
+					Añade una librería cuyos datos se pasan en el cuerpo de la petición
+					en formato JSON. De ser añadida correctamente, devuelve "201
+					Created". Si no, "error 404"
+					</h5></td>
+		</tr>
+		<tr>
+			<td><h5>PUT</h5></td>
+			<td><h5>/libs</h5></td>
+			<td><h4>Actualiza la librería de datos "name",
+					"description" y "books", que se pasan en el cuerpo de la petición
+					en formato JSON, incluyendo el id de dicha librería. Si se realiza
+					correctamente, devuelve "204 No Content". De no ser así, "error
+					404"</h4></td>
+		</tr>
+		<tr>
+			<td><h5>DELETE</h5></td>
+			<td><h5>/libs/{id}</h5></td>
+			<td><h4>Elimina la librería con id={id}. Si se realiza
+					correctamente, devuelve “204 No Content” Si la librería no existe,
+					devuelve “error 404"</h4></td>
+		</tr>
+	</table>
+</body>
+</html>
+</body>
+</html>

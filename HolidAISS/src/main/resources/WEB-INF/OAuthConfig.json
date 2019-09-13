@@ -1,0 +1,23 @@
+{
+	"Amadeus": {
+		"tokenUrl": "",
+		"clientId": "krAYswz0GsQ8UzqMJnAD8pb9a5ZcWlhL",
+		"clientSecret": "2c0ki5qD8md5etMe",
+		"authorizationFormUrl": "",
+		"scopes": [
+			""
+		]
+	},
+	"Spotify": {
+		"tokenUrl": "https://accounts.spotify.com/api/token",
+		"clientId": "fe0aeb3a689042fcb3389fa5828bf1c6",
+		"clientSecret": "9d83b922b34142bc8bebfc79fc882faf",
+		"authorizationFormUrl": "https://accounts.spotify.com/authorize",
+		"scopes": [
+			"playlist-modify-public",
+			"playlist-modify-private",
+			"playlist-read-private",
+			"playlist-read-collaborative"
+		]
+	}
+}		

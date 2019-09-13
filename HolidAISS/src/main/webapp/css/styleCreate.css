@@ -1,0 +1,75 @@
+@charset "ISO-8859-1";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+
+body{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: left;
+    background-color: #c0c0c0;
+    background-image:url("/images/coffee-communication-compose-1498964.jpg");
+  	background-position: top; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+  	background-size: cover; 
+}
+
+.navbar-laravel
+{
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+#f{
+	font-family: Raleway, sans-serif;
+	margin-left: 5%;
+	text-align: left;
+	
+}
+
+#n2{
+	width: 150%;
+	
+}
+#d2{
+	width: 150%;
+}
+.navbar-brand , .nav-link, .my-form, .login-form
+{
+    font-family: Raleway, sans-serif;
+    background-size: 100%
+}
+
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form
+{
+	margin-top: 25%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-left:25%;
+    margin-right:30%;
+	    
+}
+
+.login-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+#b1{
+	color:#ffffff;
+}
+#b2{
+	color: #ffffff;
+}

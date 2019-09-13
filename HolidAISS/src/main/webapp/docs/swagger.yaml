@@ -1,0 +1,359 @@
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: "0.4"
+servers:
+  - url: 'https://holidaiss.appspot.com'
+paths:
+  /api/books/b11:
+    delete:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '204':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    servers:
+      - url: 'https://holidaiss.appspot.com'
+  /api/libs:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                '0':
+                  value: >-
+                    [{"id":"l5","name":"AISSLibrary","description":"AISS
+                    Library","books":[{"id":"b0","title":"Harry Potter and the
+                    Philosopher's Stone","autor":"J.K.Rowling","saga":"Harry
+                    Potter","year":"1997"},{"id":"b1","title":"A Game of
+                    Thrones","autor":"George R.R.Martin","saga":"Game of
+                    Thrones","year":"1996"},{"id":"b3","title":"Maze
+                    Runner","autor":"James Dashner","saga":"Maze
+                    Runner","year":"2009"},{"id":"b2","title":"The Fellowship of
+                    the Ring","autor":"J.R.R.Tolkien","saga":"The Lord of the
+                    Rings","year":"1954"}]},{"id":"l6","name":"Favourites","description":"A
+                    sample library","books":[{"id":"b2","title":"The Fellowship
+                    of the Ring","autor":"J.R.R.Tolkien","saga":"The Lord of the
+                    Rings","year":"1954"},{"id":"b4","title":"World War Z: An
+                    Oral History of the Zombie War","autor":"Max
+                    Brooks","saga":"-none-","year":"2006"}]}]
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    put:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                books: {}
+                name:
+                  type: string
+                description:
+                  type: string
+                id:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                          "id": "l8",
+                          "name": "Libreria de Prueba",
+                          "description": "Example library"
+                          
+                      }
+              '1':
+                value: |-
+                  {
+                      "id": "l7",
+                      "name": "Libreria de Probatoria",
+                      "description": "Ejemplito",
+                      "books": null
+                  }
+      responses:
+        '204':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    post:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                books: {}
+                name:
+                  type: string
+                description:
+                  type: string
+                id:
+                  type: string
+            examples:
+              '0':
+                value: |-
+                  {
+                          "id": "l8",
+                          "name": "Libreria de Prueba",
+                          "description": "Example library"
+                          
+                      }
+              '1':
+                value: |-
+                  {
+                      "id": "l7",
+                      "name": "Libreria de Probatoria",
+                      "description": "Ejemplito",
+                      "books": null
+                  }
+      responses:
+        '201':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  books: {}
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  id:
+                    type: string
+              examples:
+                '0':
+                  value: >-
+                    {"id":"l7","name":"Libreria de
+                    Prueba","description":"Example library","books":null}
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    servers:
+      - url: 'https://holidaiss.appspot.com'
+  /api/libs/l5:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  books:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        year:
+                          type: string
+                        id:
+                          type: string
+                        title:
+                          type: string
+                        saga:
+                          type: string
+                        autor:
+                          type: string
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  id:
+                    type: string
+              examples:
+                '0':
+                  value: >-
+                    {"id":"l5","name":"AISSLibrary","description":"AISS
+                    Library","books":[{"id":"b0","title":"Harry Potter and the
+                    Philosopher's Stone","autor":"J.K.Rowling","saga":"Harry
+                    Potter","year":"1997"},{"id":"b1","title":"A Game of
+                    Thrones","autor":"George R.R.Martin","saga":"Game of
+                    Thrones","year":"1996"},{"id":"b3","title":"Maze
+                    Runner","autor":"James Dashner","saga":"Maze
+                    Runner","year":"2009"},{"id":"b2","title":"The Fellowship of
+                    the Ring","autor":"J.R.R.Tolkien","saga":"The Lord of the
+                    Rings","year":"1954"}]}
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    servers:
+      - url: 'https://holidaiss.appspot.com'
+  /api/books/:
+    put:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                year:
+                  type: string
+                id:
+                  type: string
+                title:
+                  type: string
+                saga:
+                  type: string
+                autor:
+                  type: string
+            examples:
+              '0':
+                value: "{\r\n\"id\":\"b10\",\r\n\"title\":\"Teo va al parque\",\r\n\"autor\":\"Teo el aventurero\",\r\n\"saga\":\"Las aventuras de Teo\",\r\n\"year\":\"2015\"\r\n}\r\n"
+              '1':
+                value: |-
+                  {
+                                  "id": "b0",
+                                  "title": "Harry Popotter and the Philosopher's Stone",
+                                  "autor": "Homer J Simpson",
+                                  "saga": "Harry Popotter",
+                                  "year": "2004"
+                              }
+      responses:
+        '204':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    post:
+      description: Auto generated using Swagger Inspector
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                year:
+                  type: string
+                id:
+                  type: string
+                title:
+                  type: string
+                saga:
+                  type: string
+                autor:
+                  type: string
+            examples:
+              '0':
+                value: "{\r\n\"id\":\"b10\",\r\n\"title\":\"Teo va al parque\",\r\n\"autor\":\"Teo el aventurero\",\r\n\"saga\":\"Las aventuras de Teo\",\r\n\"year\":\"2015\"\r\n}\r\n"
+              '1':
+                value: |-
+                  {
+                                  "id": "b0",
+                                  "title": "Harry Popotter and the Philosopher's Stone",
+                                  "autor": "Homer J Simpson",
+                                  "saga": "Harry Popotter",
+                                  "year": "2004"
+                              }
+      responses:
+        '201':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  year:
+                    type: string
+                  id:
+                    type: string
+                  title:
+                    type: string
+                  saga:
+                    type: string
+                  autor:
+                    type: string
+              examples:
+                '0':
+                  value: >-
+                    {"id":"b10","title":"Teo va al parque","autor":"Teo el
+                    aventurero","saga":"Las aventuras de Teo","year":"2015"}
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    servers:
+      - url: 'https://holidaiss.appspot.com'
+  /api/books/b1:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  year:
+                    type: string
+                  id:
+                    type: string
+                  title:
+                    type: string
+                  saga:
+                    type: string
+                  autor:
+                    type: string
+              examples:
+                '0':
+                  value: >-
+                    {"id":"b1","title":"A Game of Thrones","autor":"George
+                    R.R.Martin","saga":"Game of Thrones","year":"1996"}
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    servers:
+      - url: 'https://holidaiss.appspot.com'
+  /api/books:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                '0':
+                  value: >-
+                    [{"id":"b2","title":"The Fellowship of the
+                    Ring","autor":"J.R.R.Tolkien","saga":"The Lord of the
+                    Rings","year":"1954"},{"id":"b3","title":"Maze
+                    Runner","autor":"James Dashner","saga":"Maze
+                    Runner","year":"2009"},{"id":"b4","title":"World War Z: An
+                    Oral History of the Zombie War","autor":"Max
+                    Brooks","saga":"-none-","year":"2006"},{"id":"b7","title":"Libro
+                    de Prueba","autor":"Manolito don
+                    Pepito","saga":"21","year":"2011"},{"id":"b8","title":"Teo
+                    va al parque","autor":"Teo el aventurero","saga":"Las
+                    aventuras de Teo","year":"2015"},{"id":"b9","title":"Teo va
+                    al parque","autor":"Teo el aventurero","saga":"Las aventuras
+                    de Teo","year":"2015"},{"id":"b0","title":"Harry Potter and
+                    the Philosopher's Stone","autor":"J.K.Rowling","saga":"Harry
+                    Potter","year":"1997"},{"id":"b1","title":"A Game of
+                    Thrones","autor":"George R.R.Martin","saga":"Game of
+                    Thrones","year":"1996"}]
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    servers:
+      - url: 'https://holidaiss.appspot.com'
+  /api/libs/l7:
+    delete:
+      description: Auto generated using Swagger Inspector
+      responses:
+        '204':
+          description: Auto generated using Swagger Inspector
+      servers:
+        - url: 'https://holidaiss.appspot.com'
+    servers:
+      - url: 'https://holidaiss.appspot.com'
