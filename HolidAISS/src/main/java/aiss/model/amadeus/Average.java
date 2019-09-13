@@ -24,6 +24,7 @@ public class Average {
     @JsonProperty("base")
     public String getBase() {
         return base;
+        
     }
 
     @JsonProperty("base")
